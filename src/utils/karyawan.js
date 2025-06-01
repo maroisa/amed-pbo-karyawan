@@ -64,6 +64,7 @@ class KaryawanDivisi extends Karyawan {
             masaKerja: this.masaKerja,
             gender: this.gender,
             divisi: this.divisi,
+            posisi: this.posisi
         };
     }
 }
