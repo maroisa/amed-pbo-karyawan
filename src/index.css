@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "SUSE";
+    src: url("/SUSE.ttf");
+}
+
+:root {
+    font-family: "SUSE";
+    font-size: 18px;
+}
+
+html, body, #root {
+    height: 100%;
+    width: 100%;
+}
+
+th, td {
+    padding: 0.5rem;
+}
