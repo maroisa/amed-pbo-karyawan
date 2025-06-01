@@ -1,6 +1,7 @@
 import { For } from "solid-js"
 
 export default function Details({details, setDetails}){
+
     function toTitleCase(val){
         let newVal = val.replace(/([a-z])([A-Z])/g, '$1 $2')
         newVal = newVal.charAt(0).toUpperCase() + newVal.slice(1)
@@ -22,10 +23,10 @@ export default function Details({details, setDetails}){
     return <Show when={Object.keys(details()).length}>
         <div class="w-full h-full bg-white absolute top-0 left-0 p-2 md:left-auto">
             <button onClick={() => setDetails({})} class="my-4 border border-black/50 p-2 rounded-md shadow-lg active:border-black active:bg-black/10">Kembali</button>
-            <div>
+            <div class="max-w-md border shadow-lg">
                 <For each={Object.keys(details())}>
                     {(item, index) => <>
-                        <p><strong>{toTitleCase(item)}:</strong> {formatItem(item, details()[item])}</p>
+                        <p class="even:bg-gray-200 p-2"><strong>{toTitleCase(item)}:</strong> {formatItem(item, details()[item])}</p>
                     </>}
                 </For>
             </div>

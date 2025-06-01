@@ -15,6 +15,7 @@ class Karyawan {
             namaKaryawan: this.namaKaryawan,
             masaKerja: this.masaKerja,
             gender: this.gender,
+            posisi: this.posisi
         };
     }
 

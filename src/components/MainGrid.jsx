@@ -1,8 +1,8 @@
 export default function MainGrid({karyawan, setDetails, hapusKaryawan}){
     function getKaryawanData(item){
-        return { 
-            ...item.getData(), 
-            ...item.hitungGaji() 
+        return {
+            ...item.getData(),
+            ...item.hitungGaji()
         }
     }
 
