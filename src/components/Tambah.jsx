@@ -62,7 +62,11 @@ export default function Tambah({tambahActive, setTambahActive, addKaryawan}){
                 </select>
                 {/* <input type="text" class="border mb-4 p-2 rounded-md shadow-md" /> */}
                 <label>Masa Kerja</label>
-                <input onInput={(e) => setKaryawan({masaKerja: e.target.value})} type="text" class="border mb-4 p-2 rounded-md shadow-md" />
+                <input onInput={(e) => {
+                    if (e.target.value < 0) e.target.value = 0
+                    if (e.target.value > 100) e.target.value = 100
+                    setKaryawan({masaKerja: e.target.value})
+                }} type="number" max="100" min="0" class="border mb-4 p-2 rounded-md shadow-md" />
                 <label>Gender</label>
                 <select onInput={(e) => setKaryawan({gender: e.target.value})} name="gender" class="border mb-4 p-2 rounded-md shadow-md">
                     <option value="L">Laki-laki</option>
