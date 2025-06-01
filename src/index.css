@@ -1,12 +1,7 @@
 @import "tailwindcss";
 
-@font-face {
-    font-family: "SUSE";
-    src: url("/SUSE.ttf");
-}
-
 :root {
-    font-family: "SUSE";
+    font-family: "Roboto";
     font-size: 18px;
 }
 

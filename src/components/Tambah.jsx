@@ -36,6 +36,13 @@ export default function Tambah({tambahActive, setTambahActive, addKaryawan}){
 
         addKaryawan(newKaryawan)
         setTambahActive(false)
+
+        setKaryawan({
+            kodeKaryawan: "",
+            namaKaryawan: "",
+            masaKerja: 0,
+            gender: "L",
+        })
     }
 
     return <Show when={tambahActive()}>
